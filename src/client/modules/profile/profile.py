@@ -11,7 +11,7 @@ class Profile(Module):
         self.directory = Path(directory)
         self.path = self.directory / ".shh" / "userdata.json"
         self.data = self.load()
-        self.current_profile = None
+        self.selected_profile = None
 
     def load(self):
         default = {"profiles": [], "global": {"first_run": True}}
@@ -32,7 +32,7 @@ class Profile(Module):
         for profile in self.data["profiles"]:
             if profile["username"].lower() == username.lower().strip():
                 profile["isLastUsed"] = True
-                self.current_profile = profile
+                self.selected_profile = profile
                 found = True
             else:
                 profile["isLastUsed"] = False
@@ -73,6 +73,6 @@ class Profile(Module):
         }
         self.data["profiles"].append(new_profile)
         self.data["global"]["first_run"] = False
-        self.current_profile = new_profile
+        self.selected_profile = new_profile
         self.save()
         return True

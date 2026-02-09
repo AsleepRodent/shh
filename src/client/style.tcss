@@ -1,4 +1,4 @@
-#panel {
+#modal-panel {
     width: 60;
     height: 20;
     background: #1e1e1e;
@@ -20,11 +20,19 @@ ContentSwitcher {
     margin-top: 1;
 }
 
+#create_new_label {
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    content-align: center middle; /* Added to align text vertically and horizontally */
+}
+
 .desc {
     width: 100%;
     content-align: center middle;
     color: #888888;
-    margin-top: 1;
 }
 
 #btn_group {
@@ -78,15 +86,27 @@ ContentSwitcher {
 ListItem {
     background: #262626;
     border: solid #333333;
-    margin: 0 1;
+    margin: 0 1 1 1;
     padding: 0;
     height: 4;
+    content-align: center middle;
 }
 
 ListItem > .card_container {
     background: transparent;
     height: 100%;
+    width: 100%;
+    content-align: center middle;
     padding: 0 1; 
+}
+
+#create_new_trigger {
+    content-align: center middle;
+}
+
+#create_new_trigger .desc {
+    margin: 0; 
+    height: 1; 
 }
 
 ListItem:focus {

@@ -1,7 +1,7 @@
 from ..module import Module
 
 from .other.screens.introduction.introduction import Introduction    
-from .other.screens.selector.selector import Selector
+from .other.screens.profile_selector.profile_selector import ProfileSelector
 
 class Interface(Module):
     def __init__(self, client):
@@ -9,7 +9,7 @@ class Interface(Module):
         
         self.screens = {
             "introduction": Introduction(self, id="introduction"),
-            "selector": Selector(self, id="selector")
+            "profile_selector": ProfileSelector(self, id="profile_selector")
         }
         self.current_screen = self.screens["introduction"]
 

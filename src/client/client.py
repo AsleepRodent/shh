@@ -29,7 +29,7 @@ class Client(App):
             if first_run:
                 interface.switch_screen("introduction")
             else:
-                interface.switch_screen("selector")
+                interface.switch_screen("profile_selector")
 
     def get_module(self, name):
         return self.modules.get(name.lower())
