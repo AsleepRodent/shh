@@ -1,7 +1,19 @@
-from typing import Any
-
 from ..module import Module
 
+from .other.screens.introduction.introduction import Introduction    
+from .other.screens.selector.selector import Selector
+
 class Interface(Module):
-    def __init__(self, parent: Any) -> None:
-        super().__init__("Interface", parent)
+    def __init__(self, client):
+        super().__init__("Interface", client)
+        
+        self.screens = {
+            "introduction": Introduction(self, id="introduction"),
+            "selector": Selector(self, id="selector")
+        }
+        self.current_screen = self.screens["introduction"]
+
+    def switch_screen(self, screen_name):
+        if screen_name in self.screens:
+            self.current_screen = self.screens[screen_name]
+            self.client.push_screen(self.current_screen)

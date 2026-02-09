@@ -1,0 +1,120 @@
+#panel {
+    width: 60;
+    height: 20;
+    background: #1e1e1e;
+    border: solid #333333;
+    padding: 1;
+    align: center middle;
+}
+
+ContentSwitcher {
+    height: 1fr;
+    width: 100%;
+}
+
+.title {
+    width: 100%;
+    content-align: center middle;
+    text-style: bold;
+    color: #ffffff;
+    margin-top: 1;
+}
+
+.desc {
+    width: 100%;
+    content-align: center middle;
+    color: #888888;
+    margin-top: 1;
+}
+
+#btn_group {
+    width: auto;
+    height: 3;
+    align: center middle;
+    margin-bottom: 1;
+}
+
+#back_btn, #next_btn {
+    background: #333333;
+    color: #aaaaaa;
+    border: none;
+    width: 15;
+    margin: 0 1;
+}
+
+#back_btn:focus, #next_btn:focus {
+    background: #ffffff;
+    color: #000000;
+    text-style: bold;
+}
+
+#status_msg {
+    margin: 0 0 0 1; 
+    height: 1;
+    text-style: italic;
+}
+
+.success_msg {
+    color: #00FF00;
+}
+
+.error_msg {
+    color: #FF5555;
+}
+
+#username {
+    margin-bottom: 0;
+}
+
+#profile_list {
+    width: 100%;
+    height: 11;
+    background: transparent;
+    margin-top: 1;
+    border: none;
+    scrollbar-size: 1 1;
+}
+
+ListItem {
+    background: #262626;
+    border: solid #333333;
+    margin: 0 1;
+    padding: 0;
+    height: 4;
+}
+
+ListItem > .card_container {
+    background: transparent;
+    height: 100%;
+    padding: 0 1; 
+}
+
+ListItem:focus {
+    background: #333333;
+    border: solid #ffffff;
+    color: #ffffff;
+}
+
+.card_alias {
+    text-style: bold;
+    color: #ffffff;
+    height: 1;
+}
+
+.last_badge {
+    color: #ffffff90;
+    text-style: bold;
+    margin-left: 1;
+}
+
+.card_username {
+    color: #888888;
+    text-style: dim;
+    height: 1;
+}
+
+.card_date {
+    color: #444444;
+    text-style: italic;
+    height: 1;
+}

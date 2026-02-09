@@ -1,7 +1,5 @@
-from typing import Any
-
 from ..module import Module
 
 class Network(Module):
-    def __init__(self, parent: Any) -> None:
+    def __init__(self, parent):
         super().__init__("Network", parent)

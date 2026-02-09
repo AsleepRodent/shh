@@ -1,0 +1,111 @@
+{
+    "profiles": [
+        {
+            "index": 1,
+            "isLastUsed": false,
+            "username": "AsleepRodent",
+            "metadata": {
+                "created_at": "2026-02-08T23:29:51.338125",
+                "status": "active"
+            },
+            "social": {
+                "alias": "AsleepRodent",
+                "verified": false
+            }
+        },
+        {
+            "index": 2,
+            "isLastUsed": false,
+            "username": "sds",
+            "metadata": {
+                "created_at": "2026-02-08T23:33:11.039560",
+                "status": "active"
+            },
+            "social": {
+                "alias": "sds",
+                "verified": false
+            }
+        },
+        {
+            "index": 3,
+            "isLastUsed": false,
+            "username": "dsadsa",
+            "metadata": {
+                "created_at": "2026-02-08T23:34:18.007235",
+                "status": "active"
+            },
+            "social": {
+                "alias": "dsadsa",
+                "verified": false
+            }
+        },
+        {
+            "index": 4,
+            "isLastUsed": false,
+            "username": "dsadsa_outgoing",
+            "metadata": {
+                "created_at": "2026-02-08T23:34:21.086698",
+                "status": "active"
+            },
+            "social": {
+                "alias": "dsadsa_outgoing",
+                "verified": false
+            }
+        },
+        {
+            "index": 5,
+            "isLastUsed": false,
+            "username": "asdsadsadsad",
+            "metadata": {
+                "created_at": "2026-02-08T23:35:23.370526",
+                "status": "active"
+            },
+            "social": {
+                "alias": "asdsadsadsad",
+                "verified": false
+            }
+        },
+        {
+            "index": 6,
+            "isLastUsed": true,
+            "username": "ffffffff",
+            "metadata": {
+                "created_at": "2026-02-08T23:35:25.935865",
+                "status": "active"
+            },
+            "social": {
+                "alias": "ffffffff",
+                "verified": false
+            }
+        },
+        {
+            "index": 7,
+            "isLastUsed": false,
+            "username": "dsadsadsadsadsadasd",
+            "metadata": {
+                "created_at": "2026-02-08T23:36:08.111144",
+                "status": "active"
+            },
+            "social": {
+                "alias": "dsadsadsadsadsadasd",
+                "verified": false
+            }
+        },
+        {
+            "index": 8,
+            "isLastUsed": false,
+            "username": "fsafdasdsadsadsadsa",
+            "metadata": {
+                "created_at": "2026-02-08T23:39:46.193909",
+                "status": "active"
+            },
+            "social": {
+                "alias": "fsafdasdsadsadsadsa",
+                "verified": false
+            }
+        }
+    ],
+    "global": {
+        "first_run": false
+    }
+}

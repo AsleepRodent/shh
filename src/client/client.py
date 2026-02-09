@@ -1,6 +1,5 @@
 from textual.app import App
-
-from .modules.module import Module
+from pathlib import Path
 
 from .modules.interface.interface import Interface
 from .modules.network.network import Network
@@ -8,24 +7,32 @@ from .modules.profile.profile import Profile
 from .modules.graph.graph import Graph
 
 class Client(App):
-    def __init__(self, url: str, port: int) -> None:
-        self.url: str = url
-        self.port: int = port
+    CSS_PATH = "style.tcss"
 
-        self.modules: dict[str, Module] = {
-            "interface": Interface(self),
-            "network": Network(self),
-            "profile": Profile(self),
-            "graph": Graph(self)
-        }
-
+    def __init__(self, directory):
+        self.directory = Path(directory)
         super().__init__()
+        
+        self.modules = {}
+        self.modules["profile"] = Profile(self, self.directory)
+        self.modules["network"] = Network(self)
+        self.modules["graph"] = Graph(self)
+        self.modules["interface"] = Interface(self)
 
-    def getModule(self, name: str) -> Module | None:
-        for module in self.modules.values():
-            if module.name.lower() == name.lower():
-                return module
-        return None
+    def on_mount(self):
+        profile = self.get_module("profile")
+        interface = self.get_module("interface")
+        
+        if interface and profile:
+            first_run = profile.data.get("global", {}).get("first_run", True)
+            
+            if first_run:
+                interface.switch_screen("introduction")
+            else:
+                interface.switch_screen("selector")
 
-    def start(self) -> None:
+    def get_module(self, name):
+        return self.modules.get(name.lower())
+
+    def start(self):
         self.run()
